@@ -1,18 +1,18 @@
 
 export default function Navbar() {
     return (
-        <>
-            <section className='w-full bg-sky-200 text-sky-950 flex justify-center py-4'>
-
-                <div className="container flex justify-between text-lg">
-                    <h1 className="text-2xl font-bold">Farmácia da Villa</h1>
-
-                    <div className='flex gap-4'>
-                        Categoria
-                    </div>
-                </div>
-            </section>
-
-        </>
+        <header className="w-full flex justify-between items-center bg-sky-800 p-4 text-sky-100">
+            <h1 className="text-2xl font-bold">Farmácia da Villa</h1>
+            <nav>
+                <ul className="flex space-x-4">
+                    <li>
+                        Categorias
+                    </li>
+                    <li>
+                        Sobre
+                    </li>
+                </ul>
+            </nav>
+        </header>
     );
 }
