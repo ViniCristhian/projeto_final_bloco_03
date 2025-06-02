@@ -6,15 +6,9 @@ export default function Navbar() {
             <Link to="/home" >
                 <h1 className="text-2xl font-bold">Farmácia da Villa</h1>
             </Link>
-            <nav>
-                <ul className="flex space-x-4">
-                    <li>
-                        <Link to="/">Categorias</Link> 
-                    </li>
-                    <li>
-                        <Link to="/">Sobre</Link>
-                    </li>
-                </ul>
+            <nav className="flex space-x-6">
+                <Link to="/categorias">Categorias</Link>
+                <Link to="/cadastrarcategoria">Cadastrar Nova Categoria</Link>
             </nav>
         </header>
     );

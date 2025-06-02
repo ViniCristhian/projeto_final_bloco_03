@@ -5,7 +5,7 @@ export default function Footer() {
     let data = new Date().getFullYear();
 
     return(
-        <div className="w-full flex justify-center bg-sky-800 text-sky-100">
+        <footer className="w-full flex justify-center bg-sky-800 text-sky-100">
             <div className="container flex flex-col items-center py-4">
                 <p className="text-xl font-bold">Farmácio da Villa</p>
                 <p className="text-xl font-bold">Vinícius Cristhian | Copyright: {`${data}`}</p>
@@ -19,6 +19,6 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }

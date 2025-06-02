@@ -1,16 +1,8 @@
-import { useState } from "react";
-
-
+import { Link } from "react-router-dom"
+import imagem from "../../assets/imgs/foto-farmacia.jpeg"
 
 export default function Home() {
 
-    const [categoria, setCategoria] = useState("");
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        console.log("Categoria submitted:", categoria);
-        setCategoria("");
-    };
     return (
         <section className="grid grid-cols-2 min-h-[calc(100vh-64px)] bg-cyan-200">
             {/* Esquerda: Boas-vindas */}
@@ -23,25 +15,20 @@ export default function Home() {
                 </p>
             </div>
 
-            {/* Direita: Formulário de categoria */}
             <div className="flex items-center justify-center">
-                    <form onSubmit={handleSubmit} className="flex flex-col items-center bg-cyan-100 bg-opacity-70 rounded-2xl p-10 min-w-[380px] shadow-md">
-                        <label htmlFor="categoria" className="text-lg font-bold mb-2">
-                            Nova Categoria
-                        </label>
-                        <input
-                            type="text"
-                            id="categoria"
-                            value={categoria}
-                            onChange={(e) => setCategoria(e.target.value)}
-                            className="border border-sky-900 p-2 mb-4"
-                            placeholder="Digite a categoria"
-                            required
-                        />
-                        <button type="submit" className="bg-sky-500 text-white py-2 px-4 rounded-3xl">
+                <div className="bg-sky-600 text-white py-2 px-4 rounded-3xl">
+                    <div className="imagem-container flex">
+                        <img src={imagem} alt="imagem animada de uma farmácia" className="rounded-2xl" />
+                    </div>
+
+                    <div className="my-4"></div>
+
+                    <Link to="/cadastrarcategoria" className="flex items-center justify-center">
+                        <div className="bg-sky-500 text-white py-2 px-4 rounded-3xl">
                             Adicionar Categoria
-                        </button>
-                    </form>
+                        </div>
+                    </Link>
+                </div>
             </div>
         </section>
     );
